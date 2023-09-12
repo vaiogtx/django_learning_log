@@ -9,3 +9,8 @@
 </p>
 
 {% block content %}{% endblock content %}
+<hr/>
+<form action="{% url 'accounts:logout' %}" method="POST">
+    {% csrf_token %}
+    <button name="submit">Log out</button>
+</form>
